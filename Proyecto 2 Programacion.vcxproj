@@ -136,7 +136,7 @@
     <ClInclude Include="Ingreso.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="HoraExtraDiurna.cpp" />
+    <ClCompile Include="HorasExtraDiurna.cpp" />
     <ClCompile Include="HorasExtra.cpp" />
     <ClCompile Include="HorasExtraBase.cpp" />
     <ClCompile Include="HorasExtraFeriado.cpp" />

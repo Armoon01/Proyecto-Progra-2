@@ -47,7 +47,7 @@
     <ClCompile Include="HorasExtraBase.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="HoraExtraDiurna.cpp">
+    <ClCompile Include="HorasExtraDiurna.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="HorasExtraFeriado.cpp">

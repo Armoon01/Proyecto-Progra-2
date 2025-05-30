@@ -1,4 +1,4 @@
-#include "HoraExtraDiurna.h"
+#include "HorasExtraDiurna.h"
 
 //Constructor
 HorasExtraDiurna::HorasExtraDiurna(HorasExtra* base) : HorasExtra(base) {}
