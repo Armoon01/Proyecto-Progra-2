@@ -3,6 +3,6 @@ class Ingreso
 {
 public:
     virtual ~Ingreso() {}
-    virtual float calcular(float salarioBase) const = 0;
+    virtual double Calcular() const = 0;
 };
 
