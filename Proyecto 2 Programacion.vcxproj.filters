@@ -14,6 +14,7 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
   </ItemGroup>
+<<<<<<< HEAD
   <ItemGroup>
     <ClInclude Include="HorasExtra.h">
       <Filter>Archivos de encabezado</Filter>
@@ -63,4 +64,6 @@
   <ItemGroup>
     <None Include=".gitignore" />
   </ItemGroup>
+=======
+>>>>>>> 7bebafd50db92e9a32863387ac8aaee86fefb508
 </Project>
