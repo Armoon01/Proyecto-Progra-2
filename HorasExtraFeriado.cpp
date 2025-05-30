@@ -1,6 +1,6 @@
 #include "HorasExtraFeriado.h"
 HorasExtraFeriado::HorasExtraFeriado(HorasExtra* base) : HorasExtra(base) {}
 
-double HorasExtraFeriado::Calcular() const {
-    return base->Calcular();
+double HorasExtraFeriado::Calcular(double SalarioBase) const {
+    return base->Calcular(SalarioBase);
 }

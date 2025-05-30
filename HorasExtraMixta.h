@@ -4,5 +4,5 @@
 class HorasExtraMixta : public HorasExtra {
 public:
     HorasExtraMixta(HorasExtra* base);
-    double Calcular() const override;
+    double Calcular(double SalarioBase) const override;
 };

@@ -4,6 +4,6 @@
 class HorasExtraFeriado : public HorasExtra {
 public:
     HorasExtraFeriado(HorasExtra* base);
-    double Calcular() const override;
+    double Calcular(double SalarioBase) const override;
 };
 

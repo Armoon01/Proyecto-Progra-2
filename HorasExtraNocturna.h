@@ -4,6 +4,6 @@
 class HorasExtraNocturna : public HorasExtra {
 public:
     HorasExtraNocturna(HorasExtra* base);
-    double Calcular() const override;
+    double Calcular(double SalarioBase) const override;
 };
 

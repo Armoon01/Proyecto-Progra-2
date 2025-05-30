@@ -127,6 +127,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BonificacionFija.h" />
+    <ClInclude Include="BonificacionPorcentaje.h" />
     <ClInclude Include="HorasExtraDiurna.h" />
     <ClInclude Include="HorasExtra.h" />
     <ClInclude Include="HorasExtraBase.h" />
@@ -138,6 +140,8 @@
     <ClInclude Include="IngresoFactory.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BonificacionFija.cpp" />
+    <ClCompile Include="BonificacionPorcentaje.cpp" />
     <ClCompile Include="HorasExtraDiurna.cpp" />
     <ClCompile Include="HorasExtra.cpp" />
     <ClCompile Include="HorasExtraBase.cpp" />

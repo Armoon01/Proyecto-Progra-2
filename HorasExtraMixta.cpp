@@ -3,6 +3,6 @@
 HorasExtraMixta::HorasExtraMixta(HorasExtra* base) : HorasExtra(base) {}
 
 // Calcular 
-double HorasExtraMixta::Calcular() const {
-    return base->Calcular() * (3 / 2) * (8 / 7);
+double HorasExtraMixta::Calcular(double SalarioBase) const {
+    return base->Calcular(SalarioBase) * (3 / 2) * (8 / 7);
 }

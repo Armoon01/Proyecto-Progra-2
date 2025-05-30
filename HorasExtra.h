@@ -9,6 +9,6 @@ protected:
 public:
     HorasExtra(HorasExtra* base = nullptr) : base(base) {}
     virtual ~HorasExtra() {}
-    virtual double Calcular() const = 0;
+    virtual double Calcular(double SalarioBase) const = 0;
 };
 

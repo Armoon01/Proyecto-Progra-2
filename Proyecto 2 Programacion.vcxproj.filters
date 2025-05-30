@@ -42,6 +42,12 @@
     <ClInclude Include="IngresoFactory.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="BonificacionFija.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="BonificacionPorcentaje.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="HorasExtra.cpp">
@@ -69,6 +75,12 @@
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="IngresoFactory.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="BonificacionFija.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="BonificacionPorcentaje.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>

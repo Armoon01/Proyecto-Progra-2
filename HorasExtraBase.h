@@ -6,5 +6,5 @@ class HorasExtraBase : public HorasExtra {
     double valorHora;
 public:
     HorasExtraBase(int cantidadHoras, double valorHora);
-    double Calcular() const override;
+    double Calcular(double SalarioBase) const override;
 };
