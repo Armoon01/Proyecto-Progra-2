@@ -1,16 +1,16 @@
 #pragma once
 #include "Ingreso.h"
-#include <iostream>
+#include "BonificacionFija.h"
+#include "BonificacionPorcentaje.h"
+#include "HorasExtraDiurna.h"
+#include "HorasExtraMixta.h"
+#include "HorasExtraNocturna.h"
+#include "HorasExtraFeriado.h"
 using namespace std;
 
 class IngresoBuilder {
-protected:
-    string tipo;
-    int cantidad;
 public:
-    IngresoBuilder& setTipo(const string& tipo);
-    IngresoBuilder& setCantidad(int cantidad);
-    virtual Ingreso* build() = 0;
-    virtual ~IngresoBuilder() {}
+    static Ingreso* crearFijo(float monto);
+    static Ingreso* crearPorcentaje(float porcentaje);
+    static Ingreso* crearHorasExtra(const string& tipo, HorasExtra* base = nullptr);
 };
-

@@ -1,11 +1,25 @@
 #include "IngresoBuilder.h"
 
-IngresoBuilder& IngresoBuilder::setTipo(const std::string& tipo) {
-    this->tipo = tipo;
-    return *this;
+Ingreso* IngresoBuilder::crearFijo(float monto) {
+    return new BonificacionFija(monto);
 }
 
-IngresoBuilder& IngresoBuilder::setCantidad(int cantidad) {
-    this->cantidad = cantidad;
-    return *this;
+Ingreso* IngresoBuilder::crearPorcentaje(float porcentaje) {
+    return new BonificacionPorcentaje(porcentaje);
+}
+
+Ingreso* IngresoBuilder::crearHorasExtra(const string& tipo, HorasExtra* base) {
+    if (tipo == "diurna") {
+        return new HorasExtraDiurna(base);
+    }
+    else if (tipo == "mixta") {
+        return new HorasExtraMixta(base);
+    }
+    else if (tipo == "nocturna") {
+        return new HorasExtraNocturna(base);
+    }
+    else if (tipo == "feriado") {
+        return new HorasExtraFeriado(base);
+    }
+    return nullptr;
 }
