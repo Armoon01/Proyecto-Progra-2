@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <!-- Deducciones -->
     <ClInclude Include="CCSS.h" />
     <ClInclude Include="Deduccion.h" />
     <ClInclude Include="DeduccionBuilder.h" />
@@ -136,8 +137,21 @@
     <ClInclude Include="Embargos.h" />
     <ClInclude Include="Maternidad.h" />
     <ClInclude Include="Renta.h" />
+    <!-- Ingresos y Bonificaciones -->
+    <ClInclude Include="BonificacionFija.h" />
+    <ClInclude Include="BonificacionPorcentaje.h" />
+    <ClInclude Include="HorasExtraDiurna.h" />
+    <ClInclude Include="HorasExtra.h" />
+    <ClInclude Include="HorasExtraBase.h" />
+    <ClInclude Include="HorasExtraFeriado.h" />
+    <ClInclude Include="HorasExtraMixta.h" />
+    <ClInclude Include="HorasExtraNocturna.h" />
+    <ClInclude Include="Ingreso.h" />
+    <ClInclude Include="IngresoBuilder.h" />
+    <ClInclude Include="IngresoFactory.h" />
   </ItemGroup>
   <ItemGroup>
+    <!-- Deducciones -->
     <ClCompile Include="CCSS.cpp" />
     <ClCompile Include="Deduccion.cpp" />
     <ClCompile Include="DeduccionBuilder.cpp" />
@@ -147,6 +161,18 @@
     <ClCompile Include="Embargos.cpp" />
     <ClCompile Include="Maternidad.cpp" />
     <ClCompile Include="Renta.cpp" />
+    <!-- Ingresos y Bonificaciones -->
+    <ClCompile Include="BonificacionFija.cpp" />
+    <ClCompile Include="BonificacionPorcentaje.cpp" />
+    <ClCompile Include="HorasExtraDiurna.cpp" />
+    <ClCompile Include="HorasExtra.cpp" />
+    <ClCompile Include="HorasExtraBase.cpp" />
+    <ClCompile Include="HorasExtraFeriado.cpp" />
+    <ClCompile Include="HorasExtraMixta.cpp" />
+    <ClCompile Include="HorasExtraNocturna.cpp" />
+    <ClCompile Include="Ingreso.cpp" />
+    <ClCompile Include="IngresoBuilder.cpp" />
+    <ClCompile Include="IngresoFactory.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />

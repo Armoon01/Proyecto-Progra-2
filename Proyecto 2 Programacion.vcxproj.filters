@@ -15,6 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <!-- Deducciones -->
     <ClInclude Include="Deduccion.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
@@ -42,8 +43,43 @@
     <ClInclude Include="DeduccionBuilder.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <!-- Ingresos y Bonificaciones -->
+    <ClInclude Include="HorasExtra.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Ingreso.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="HorasExtraBase.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="HorasExtraDiurna.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="HorasExtraFeriado.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="HorasExtraMixta.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="HorasExtraNocturna.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="IngresoBuilder.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="IngresoFactory.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="BonificacionFija.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="BonificacionPorcentaje.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <!-- Deducciones -->
     <ClCompile Include="Deduccion.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
@@ -69,6 +105,40 @@
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="DeduccionBuilder.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <!-- Ingresos y Bonificaciones -->
+    <ClCompile Include="HorasExtra.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Ingreso.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="HorasExtraBase.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="HorasExtraDiurna.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="HorasExtraFeriado.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="HorasExtraMixta.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="HorasExtraNocturna.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="IngresoBuilder.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="IngresoFactory.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="BonificacionFija.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="BonificacionPorcentaje.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
