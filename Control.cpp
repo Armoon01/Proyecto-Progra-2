@@ -15,6 +15,14 @@ Colaborador* Control::buscarColaborador(string cedula){
 	return datos->buscarColaborador(cedula);
 }
 
+void Control::eliminarColaborador(string cedula){
+	datos->eliminarColaborador(cedula);
+}
+
+string Control::listarColaboradores(){
+	return datos->listarColaboradores();
+}
+
 void Control::mostrarMenuColaboradores(){
 	menuColaboradores->show();
 }
@@ -23,3 +31,22 @@ void Control::mostrarMenuPrincipal(){
 	menuPrincipal->show();
 }
 
+void Control::mostrarMenuColillas(Colaborador* colaborador) {
+	if (!menuColillas) {
+		menuColillas = new MenuColillas(this, colaborador);
+	}
+	else {
+		menuColillas->setColaborador(colaborador);
+	}
+	menuColillas->show();
+}
+
+void Control::mostrarMenuNominas(Colaborador* colaborador) {
+	if (!menuNominas) {
+		menuNominas = new MenuNominas(this, colaborador);
+	}
+	else {
+		menuNominas->setColaborador(colaborador);
+	}
+	menuNominas->show();
+}

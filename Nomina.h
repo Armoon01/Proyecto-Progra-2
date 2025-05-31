@@ -14,5 +14,6 @@ public:
     float calcularSalarioNeto(float salarioBase);
     Lista* getIngresos() const;
     Lista* getDeducciones() const;
+    string toString(float salarioBase);
 };
 

@@ -20,7 +20,7 @@ IIterador* ConjuntoColaborador::getIterador() const {
     return listaPersonas->getIterador();
 }
 
-Colaborador* ConjuntoColaborador::buscar(const std::string& cedula) const {
+Colaborador* ConjuntoColaborador::buscar(const string& cedula) const {
     IIterador* it = listaPersonas->getIterador();
     while (it->hasMore()) {
         Colaborador* colab = dynamic_cast<Colaborador*>(it->next());
@@ -33,7 +33,7 @@ Colaborador* ConjuntoColaborador::buscar(const std::string& cedula) const {
     return nullptr;
 }
 
-void ConjuntoColaborador::remover(const std::string& cedula) {
+void ConjuntoColaborador::remover(const string& cedula) {
     IIterador* it = listaPersonas->getIterador();
     while (it->hasMore()) {
         Colaborador* colab = dynamic_cast<Colaborador*>(it->next());

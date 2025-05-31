@@ -21,6 +21,8 @@ public:
     Lista* getColillas() const;
     string toString() const override;
     virtual bool equals(IObjecto*) override;
+    void setSalarioBase(float salarioBase);
+    void setNombre(const string& nombre);
 };
 
 bool operator==(Colaborador&, Colaborador&);

@@ -1,5 +1,6 @@
 #pragma once
-class Ingreso
+#include "ObjectAdaptador.h"
+class Ingreso : public ObjectAdaptador
 {
 
 public:

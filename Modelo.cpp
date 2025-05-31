@@ -26,3 +26,10 @@ Colaborador* Modelo::buscarColaborador(string cedula) {
 	return Colaboradores->buscar(cedula);
 }
 
+void Modelo::eliminarColaborador(string cedula) {
+	Colaboradores->remover(cedula);
+}
+
+string Modelo::listarColaboradores() {
+	return Colaboradores->getListaPersonas()->toString();
+}

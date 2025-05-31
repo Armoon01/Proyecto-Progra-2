@@ -1,5 +1,5 @@
 #include "Colilla.h"
-
+#include <sstream>
 Colilla::Colilla(const std::string& periodo, const std::string& fecha, Nomina* nomina)
     : periodo(periodo), fecha(fecha), nomina(nomina) {}
 

@@ -1,16 +1,4 @@
-﻿  Colaborador.cpp
-  Colilla.cpp
-  ConjuntoColaborador.cpp
-  Consola.cpp
-  Control.cpp
-  Lista.cpp
-  MenuColaboradores.cpp
-C:\Users\AMD\Desktop\proyecto 2 progra 2\MenuColaboradores.cpp(22,18): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
-  MenuPrincipal.cpp
-  Modelo.cpp
-  Nomina.cpp
-C:\Users\AMD\Desktop\proyecto 2 progra 2\Nomina.cpp(17,39): warning C4244: '+=': conversión de 'double' a 'float'; posible pérdida de datos
-  SistemaNomina.cpp
-  Generando código...
-MSVCRTD.lib(exe_main.obj) : error LNK2019: símbolo externo main sin resolver al que se hace referencia en la función "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
-C:\Users\AMD\Desktop\proyecto 2 progra 2\x64\Debug\Proyecto 2 Programacion.exe : fatal error LNK1120: 1 externos sin resolver
+﻿  MenuColaboradores.cpp
+C:\Users\lunai\OneDrive\Escritorio\Proyecto Github Progra\MenuColaboradores.cpp(22,18): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\lunai\OneDrive\Escritorio\Proyecto Github Progra\MenuColaboradores.cpp(39,18): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+  Proyecto 2 Programacion.vcxproj -> C:\Users\lunai\OneDrive\Escritorio\Proyecto Github Progra\x64\Debug\Proyecto 2 Programacion.exe

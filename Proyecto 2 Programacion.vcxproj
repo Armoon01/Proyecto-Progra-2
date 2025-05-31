@@ -149,6 +149,8 @@
     <ClInclude Include="Lista.h" />
     <ClInclude Include="Maternidad.h" />
     <ClInclude Include="MenuColaboradores.h" />
+    <ClInclude Include="MenuColillas.h" />
+    <ClInclude Include="MenuNominas.h" />
     <ClInclude Include="MenuPrincipal.h" />
     <ClInclude Include="Modelo.h" />
     <ClInclude Include="Nodo.h" />
@@ -191,8 +193,11 @@
     <ClCompile Include="IObjecto.cpp" />
     <ClCompile Include="IteradorLista.cpp" />
     <ClCompile Include="Lista.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="Maternidad.cpp" />
     <ClCompile Include="MenuColaboradores.cpp" />
+    <ClCompile Include="MenuColillas.cpp" />
+    <ClCompile Include="MenuNominas.cpp" />
     <ClCompile Include="MenuPrincipal.cpp" />
     <ClCompile Include="Modelo.cpp" />
     <ClCompile Include="Nodo.cpp" />

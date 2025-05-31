@@ -12,6 +12,8 @@ public:
 	static Modelo* getInstancia();
 	virtual void agregar(Colaborador*);
 	virtual Colaborador* buscarColaborador(string);
+	virtual void eliminarColaborador(string);
+	virtual string listarColaboradores();
 }; 
 
 

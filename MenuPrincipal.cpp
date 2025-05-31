@@ -13,11 +13,5 @@ void MenuPrincipal::lanzar(int pos) {
 	if (pos == 1) {
 		gestor->mostrarMenuColaboradores();
 	}
-	/*else if (pos == 2) {
-
-	}*/
-	else {
-		// Cerrar
-	}
 }
 
