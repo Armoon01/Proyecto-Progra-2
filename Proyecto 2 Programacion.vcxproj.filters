@@ -77,6 +77,9 @@
     <ClInclude Include="BonificacionPorcentaje.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="IIterador.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <!-- Deducciones -->
@@ -139,6 +142,9 @@
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="BonificacionPorcentaje.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="IIterador.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
