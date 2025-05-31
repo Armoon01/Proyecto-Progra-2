@@ -1,5 +1,6 @@
 #include "HorasExtra.h"
-// ConstructorAdd commentMore actions
+
+// Constructor
 HorasExtra::HorasExtra(HorasExtra* base) : base(base) {}
 
 // Destructor

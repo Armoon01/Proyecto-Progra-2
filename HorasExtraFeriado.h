@@ -6,4 +6,3 @@ public:
     HorasExtraFeriado(HorasExtra* base);
     double Calcular(double SalarioBase) const override;
 };
-

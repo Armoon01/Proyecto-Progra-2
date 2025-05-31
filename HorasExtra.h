@@ -11,4 +11,3 @@ public:
     virtual ~HorasExtra();
     virtual double Calcular(double SalarioBase) const = 0;
 };
-
