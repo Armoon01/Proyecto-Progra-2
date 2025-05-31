@@ -129,13 +129,32 @@
   <ItemGroup>
     <!-- Deducciones -->
     <ClInclude Include="CCSS.h" />
+    <ClInclude Include="Colaborador.h" />
+    <ClInclude Include="Colilla.h" />
+    <ClInclude Include="ConjuntoColaborador.h" />
+    <ClInclude Include="Consola.h" />
+    <ClInclude Include="Control.h" />
+    <ClInclude Include="ControladorNomina.h" />
     <ClInclude Include="Deduccion.h" />
     <ClInclude Include="DeduccionBuilder.h" />
     <ClInclude Include="DeduccionFactory.h" />
     <ClInclude Include="DeduccionFija.h" />
     <ClInclude Include="DeduccionPorcentaje.h" />
     <ClInclude Include="Embargos.h" />
+    <ClInclude Include="IColeccion.h" />
+    <ClInclude Include="IEnumerable.h" />
+    <ClInclude Include="IIterador.h" />
+    <ClInclude Include="IObjecto.h" />
+    <ClInclude Include="IteradorLista.h" />
+    <ClInclude Include="Lista.h" />
     <ClInclude Include="Maternidad.h" />
+    <ClInclude Include="MenuColaboradores.h" />
+    <ClInclude Include="MenuPrincipal.h" />
+    <ClInclude Include="Modelo.h" />
+    <ClInclude Include="Nodo.h" />
+    <ClInclude Include="Nomina.h" />
+    <ClInclude Include="ObjectAdaptador.h" />
+    <ClInclude Include="OpcionMenu.h" />
     <ClInclude Include="Renta.h" />
     <!-- Ingresos y Bonificaciones -->
     <ClInclude Include="BonificacionFija.h" />
@@ -149,17 +168,37 @@
     <ClInclude Include="Ingreso.h" />
     <ClInclude Include="IngresoBuilder.h" />
     <ClInclude Include="IngresoFactory.h" />
+    <ClInclude Include="SistemaNomina.h" />
   </ItemGroup>
   <ItemGroup>
     <!-- Deducciones -->
     <ClCompile Include="CCSS.cpp" />
+    <ClCompile Include="Colaborador.cpp" />
+    <ClCompile Include="Colilla.cpp" />
+    <ClCompile Include="ConjuntoColaborador.cpp" />
+    <ClCompile Include="Consola.cpp" />
+    <ClCompile Include="Control.cpp" />
+    <ClCompile Include="ControladorNomina.cpp" />
     <ClCompile Include="Deduccion.cpp" />
     <ClCompile Include="DeduccionBuilder.cpp" />
     <ClCompile Include="DeduccionFactory.cpp" />
     <ClCompile Include="DeduccionFija.cpp" />
     <ClCompile Include="DeduccionPorcentaje.cpp" />
     <ClCompile Include="Embargos.cpp" />
+    <ClCompile Include="IColeccion.cpp" />
+    <ClCompile Include="IEnumerable.cpp" />
+    <ClCompile Include="IIterador.cpp" />
+    <ClCompile Include="IObjecto.cpp" />
+    <ClCompile Include="IteradorLista.cpp" />
+    <ClCompile Include="Lista.cpp" />
     <ClCompile Include="Maternidad.cpp" />
+    <ClCompile Include="MenuColaboradores.cpp" />
+    <ClCompile Include="MenuPrincipal.cpp" />
+    <ClCompile Include="Modelo.cpp" />
+    <ClCompile Include="Nodo.cpp" />
+    <ClCompile Include="Nomina.cpp" />
+    <ClCompile Include="ObjectAdaptador.cpp" />
+    <ClCompile Include="OpcionMenu.cpp" />
     <ClCompile Include="Renta.cpp" />
     <!-- Ingresos y Bonificaciones -->
     <ClCompile Include="BonificacionFija.cpp" />
@@ -173,6 +212,7 @@
     <ClCompile Include="Ingreso.cpp" />
     <ClCompile Include="IngresoBuilder.cpp" />
     <ClCompile Include="IngresoFactory.cpp" />
+    <ClCompile Include="SistemaNomina.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
