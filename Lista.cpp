@@ -127,17 +127,3 @@ Nodo* Lista::remover(Nodo* actual, ObjectAdaptador* dato) {
 
 
 
-// void Lista::remover(ObjectAdaptador* porEliminar) {
-//     root = remover(root, porEliminar);
-// }
-// 
-// Nodo* Lista::remover(Nodo* actual, ObjectAdaptador* porEliminar) {
-//     if (actual == NULL) {
-//         return NULL;
-//     }
-//     else if (actual->getDato()->equals(porEliminar)) {
-//         return actual->getSiguiente();
-//     }
-//     actual->setSiguiente(remover(actual->getSiguiente(), porEliminar));
-//     return actual;
-// }

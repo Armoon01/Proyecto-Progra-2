@@ -129,6 +129,9 @@
   <ItemGroup>
     <!-- Deducciones -->
     <ClInclude Include="CCSS.h" />
+    <ClInclude Include="Colaborador.h" />
+    <ClInclude Include="Colilla.h" />
+    <ClInclude Include="ConjuntoColaborador.h" />
     <ClInclude Include="Deduccion.h" />
     <ClInclude Include="DeduccionBuilder.h" />
     <ClInclude Include="DeduccionFactory.h" />
@@ -143,6 +146,7 @@
     <ClInclude Include="Lista.h" />
     <ClInclude Include="Maternidad.h" />
     <ClInclude Include="Nodo.h" />
+    <ClInclude Include="Nomina.h" />
     <ClInclude Include="ObjectAdaptador.h" />
     <ClInclude Include="Renta.h" />
     <!-- Ingresos y Bonificaciones -->
@@ -157,10 +161,14 @@
     <ClInclude Include="Ingreso.h" />
     <ClInclude Include="IngresoBuilder.h" />
     <ClInclude Include="IngresoFactory.h" />
+    <ClInclude Include="SistemaNomina.h" />
   </ItemGroup>
   <ItemGroup>
     <!-- Deducciones -->
     <ClCompile Include="CCSS.cpp" />
+    <ClCompile Include="Colaborador.cpp" />
+    <ClCompile Include="Colilla.cpp" />
+    <ClCompile Include="ConjuntoColaborador.cpp" />
     <ClCompile Include="Deduccion.cpp" />
     <ClCompile Include="DeduccionBuilder.cpp" />
     <ClCompile Include="DeduccionFactory.cpp" />
@@ -175,6 +183,7 @@
     <ClCompile Include="Lista.cpp" />
     <ClCompile Include="Maternidad.cpp" />
     <ClCompile Include="Nodo.cpp" />
+    <ClCompile Include="Nomina.cpp" />
     <ClCompile Include="ObjectAdaptador.cpp" />
     <ClCompile Include="Renta.cpp" />
     <!-- Ingresos y Bonificaciones -->
@@ -189,6 +198,7 @@
     <ClCompile Include="Ingreso.cpp" />
     <ClCompile Include="IngresoBuilder.cpp" />
     <ClCompile Include="IngresoFactory.cpp" />
+    <ClCompile Include="SistemaNomina.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
