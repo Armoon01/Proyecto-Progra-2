@@ -136,7 +136,9 @@
     <ClInclude Include="DeduccionPorcentaje.h" />
     <ClInclude Include="Embargos.h" />
     <ClInclude Include="IIterador.h" />
+    <ClInclude Include="IObjecto.h" />
     <ClInclude Include="Maternidad.h" />
+    <ClInclude Include="ObjectAdaptador.h" />
     <ClInclude Include="Renta.h" />
     <!-- Ingresos y Bonificaciones -->
     <ClInclude Include="BonificacionFija.h" />
@@ -161,7 +163,9 @@
     <ClCompile Include="DeduccionPorcentaje.cpp" />
     <ClCompile Include="Embargos.cpp" />
     <ClCompile Include="IIterador.cpp" />
+    <ClCompile Include="IObjecto.cpp" />
     <ClCompile Include="Maternidad.cpp" />
+    <ClCompile Include="ObjectAdaptador.cpp" />
     <ClCompile Include="Renta.cpp" />
     <!-- Ingresos y Bonificaciones -->
     <ClCompile Include="BonificacionFija.cpp" />
