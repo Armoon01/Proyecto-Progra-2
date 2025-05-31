@@ -17,7 +17,6 @@
       <Configuration>Release</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
-
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
@@ -53,27 +52,24 @@
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
-
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
-  <ImportGroup Label="Shared" >
+  <ImportGroup Label="Shared">
   </ImportGroup>
-    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    </ImportGroup>
-    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    </ImportGroup>
-    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    </ImportGroup>
-    <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-      <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    </ImportGroup>
-
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -130,8 +126,83 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-
-  <ItemGroup></ItemGroup>
+  <ItemGroup>
+    <!-- Deducciones -->
+    <ClInclude Include="CCSS.h" />
+    <ClInclude Include="Colaborador.h" />
+    <ClInclude Include="Colilla.h" />
+    <ClInclude Include="ConjuntoColaborador.h" />
+    <ClInclude Include="Deduccion.h" />
+    <ClInclude Include="DeduccionBuilder.h" />
+    <ClInclude Include="DeduccionFactory.h" />
+    <ClInclude Include="DeduccionFija.h" />
+    <ClInclude Include="DeduccionPorcentaje.h" />
+    <ClInclude Include="Embargos.h" />
+    <ClInclude Include="IColeccion.h" />
+    <ClInclude Include="IEnumerable.h" />
+    <ClInclude Include="IIterador.h" />
+    <ClInclude Include="IObjecto.h" />
+    <ClInclude Include="IteradorLista.h" />
+    <ClInclude Include="Lista.h" />
+    <ClInclude Include="Maternidad.h" />
+    <ClInclude Include="Nodo.h" />
+    <ClInclude Include="Nomina.h" />
+    <ClInclude Include="ObjectAdaptador.h" />
+    <ClInclude Include="Renta.h" />
+    <!-- Ingresos y Bonificaciones -->
+    <ClInclude Include="BonificacionFija.h" />
+    <ClInclude Include="BonificacionPorcentaje.h" />
+    <ClInclude Include="HorasExtraDiurna.h" />
+    <ClInclude Include="HorasExtra.h" />
+    <ClInclude Include="HorasExtraBase.h" />
+    <ClInclude Include="HorasExtraFeriado.h" />
+    <ClInclude Include="HorasExtraMixta.h" />
+    <ClInclude Include="HorasExtraNocturna.h" />
+    <ClInclude Include="Ingreso.h" />
+    <ClInclude Include="IngresoBuilder.h" />
+    <ClInclude Include="IngresoFactory.h" />
+    <ClInclude Include="SistemaNomina.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- Deducciones -->
+    <ClCompile Include="CCSS.cpp" />
+    <ClCompile Include="Colaborador.cpp" />
+    <ClCompile Include="Colilla.cpp" />
+    <ClCompile Include="ConjuntoColaborador.cpp" />
+    <ClCompile Include="Deduccion.cpp" />
+    <ClCompile Include="DeduccionBuilder.cpp" />
+    <ClCompile Include="DeduccionFactory.cpp" />
+    <ClCompile Include="DeduccionFija.cpp" />
+    <ClCompile Include="DeduccionPorcentaje.cpp" />
+    <ClCompile Include="Embargos.cpp" />
+    <ClCompile Include="IColeccion.cpp" />
+    <ClCompile Include="IEnumerable.cpp" />
+    <ClCompile Include="IIterador.cpp" />
+    <ClCompile Include="IObjecto.cpp" />
+    <ClCompile Include="IteradorLista.cpp" />
+    <ClCompile Include="Lista.cpp" />
+    <ClCompile Include="Maternidad.cpp" />
+    <ClCompile Include="Nodo.cpp" />
+    <ClCompile Include="Nomina.cpp" />
+    <ClCompile Include="ObjectAdaptador.cpp" />
+    <ClCompile Include="Renta.cpp" />
+    <!-- Ingresos y Bonificaciones -->
+    <ClCompile Include="BonificacionFija.cpp" />
+    <ClCompile Include="BonificacionPorcentaje.cpp" />
+    <ClCompile Include="HorasExtraDiurna.cpp" />
+    <ClCompile Include="HorasExtra.cpp" />
+    <ClCompile Include="HorasExtraBase.cpp" />
+    <ClCompile Include="HorasExtraFeriado.cpp" />
+    <ClCompile Include="HorasExtraMixta.cpp" />
+    <ClCompile Include="HorasExtraNocturna.cpp" />
+    <ClCompile Include="Ingreso.cpp" />
+    <ClCompile Include="IngresoBuilder.cpp" />
+    <ClCompile Include="IngresoFactory.cpp" />
+    <ClCompile Include="SistemaNomina.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
