@@ -1,0 +1,36 @@
+﻿  CCSS.cpp
+  Deduccion.cpp
+  DeduccionBuilder.cpp
+  DeduccionFactory.cpp
+  DeduccionFija.cpp
+  DeduccionPorcentaje.cpp
+  Embargos.cpp
+  IColeccion.cpp
+  IEnumerable.cpp
+  IIterador.cpp
+  IObjecto.cpp
+  Maternidad.cpp
+  ObjectAdaptador.cpp
+  Renta.cpp
+  BonificacionFija.cpp
+  BonificacionPorcentaje.cpp
+  HorasExtraDiurna.cpp
+  HorasExtra.cpp
+  HorasExtraBase.cpp
+C:\Users\lunai\OneDrive\Escritorio\Proyecto Github Progra\HorasExtra.cpp(3,13): error C2084: la función 'HorasExtra::HorasExtra(HorasExtra *)' ya tiene un cuerpo
+C:\Users\lunai\OneDrive\Escritorio\Proyecto Github Progra\HorasExtra.cpp(6,14): error C2084: la función 'HorasExtra::~HorasExtra(void)' ya tiene un cuerpo
+C:\Users\lunai\OneDrive\Escritorio\Proyecto Github Progra\HorasExtra.cpp(6,27): error C1075: "{": no se encontró ningún token coincidente
+C:\Users\lunai\OneDrive\Escritorio\Proyecto Github Progra\HorasExtraBase.h(1,9): warning C4068: pragma "onceAdd" desconocida
+  HorasExtraFeriado.cpp
+C:\Users\lunai\OneDrive\Escritorio\Proyecto Github Progra\HorasExtraFeriado.h(1,9): warning C4068: pragma "onceAdd" desconocida
+  Generando código...
+  Compilando...
+  HorasExtraMixta.cpp
+  HorasExtraNocturna.cpp
+  Ingreso.cpp
+  IngresoBuilder.cpp
+C:\Users\lunai\OneDrive\Escritorio\Proyecto Github Progra\HorasExtraFeriado.h(1,9): warning C4068: pragma "onceAdd" desconocida
+  IngresoFactory.cpp
+C:\Users\lunai\OneDrive\Escritorio\Proyecto Github Progra\HorasExtraFeriado.h(1,9): warning C4068: pragma "onceAdd" desconocida
+C:\Users\lunai\OneDrive\Escritorio\Proyecto Github Progra\HorasExtraBase.h(1,9): warning C4068: pragma "onceAdd" desconocida
+  Generando código...
