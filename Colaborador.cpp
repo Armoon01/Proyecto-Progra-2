@@ -36,3 +36,7 @@ bool Colaborador::equals(IObjecto* ref) {
 std::string Colaborador::toString() const {
 	return "Colaborador: " + nombre + ", Cedula: " + cedula + ", Salario Base: " + to_string(salarioBase);
 }
+
+bool operator==(Colaborador& p1, Colaborador& p2) {
+    return p1.getCedula().compare(p2.getCedula()) == 0;
+}

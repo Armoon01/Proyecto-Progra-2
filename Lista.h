@@ -19,6 +19,7 @@ public:
 	virtual bool vacio() const;
 	virtual void remover(ObjectAdaptador*);
 	virtual void agregarFinal(ObjectAdaptador*);
+	virtual ~Lista();
 private:
 	virtual Nodo* remover(Nodo*, ObjectAdaptador*);
 };

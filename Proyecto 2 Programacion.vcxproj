@@ -132,6 +132,9 @@
     <ClInclude Include="Colaborador.h" />
     <ClInclude Include="Colilla.h" />
     <ClInclude Include="ConjuntoColaborador.h" />
+    <ClInclude Include="Consola.h" />
+    <ClInclude Include="Control.h" />
+    <ClInclude Include="ControladorNomina.h" />
     <ClInclude Include="Deduccion.h" />
     <ClInclude Include="DeduccionBuilder.h" />
     <ClInclude Include="DeduccionFactory.h" />
@@ -145,9 +148,13 @@
     <ClInclude Include="IteradorLista.h" />
     <ClInclude Include="Lista.h" />
     <ClInclude Include="Maternidad.h" />
+    <ClInclude Include="MenuColaboradores.h" />
+    <ClInclude Include="MenuPrincipal.h" />
+    <ClInclude Include="Modelo.h" />
     <ClInclude Include="Nodo.h" />
     <ClInclude Include="Nomina.h" />
     <ClInclude Include="ObjectAdaptador.h" />
+    <ClInclude Include="OpcionMenu.h" />
     <ClInclude Include="Renta.h" />
     <!-- Ingresos y Bonificaciones -->
     <ClInclude Include="BonificacionFija.h" />
@@ -169,6 +176,9 @@
     <ClCompile Include="Colaborador.cpp" />
     <ClCompile Include="Colilla.cpp" />
     <ClCompile Include="ConjuntoColaborador.cpp" />
+    <ClCompile Include="Consola.cpp" />
+    <ClCompile Include="Control.cpp" />
+    <ClCompile Include="ControladorNomina.cpp" />
     <ClCompile Include="Deduccion.cpp" />
     <ClCompile Include="DeduccionBuilder.cpp" />
     <ClCompile Include="DeduccionFactory.cpp" />
@@ -182,9 +192,13 @@
     <ClCompile Include="IteradorLista.cpp" />
     <ClCompile Include="Lista.cpp" />
     <ClCompile Include="Maternidad.cpp" />
+    <ClCompile Include="MenuColaboradores.cpp" />
+    <ClCompile Include="MenuPrincipal.cpp" />
+    <ClCompile Include="Modelo.cpp" />
     <ClCompile Include="Nodo.cpp" />
     <ClCompile Include="Nomina.cpp" />
     <ClCompile Include="ObjectAdaptador.cpp" />
+    <ClCompile Include="OpcionMenu.cpp" />
     <ClCompile Include="Renta.cpp" />
     <!-- Ingresos y Bonificaciones -->
     <ClCompile Include="BonificacionFija.cpp" />

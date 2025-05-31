@@ -23,3 +23,4 @@ public:
     virtual bool equals(IObjecto*) override;
 };
 
+bool operator==(Colaborador&, Colaborador&);

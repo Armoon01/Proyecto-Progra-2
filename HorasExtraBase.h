@@ -1,4 +1,4 @@
-#pragma onceAdd commentMore actions
+#pragma once
 #include "HorasExtra.h"
 
 class HorasExtraBase : public HorasExtra {
