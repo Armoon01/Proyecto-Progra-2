@@ -33,3 +33,7 @@ void Modelo::eliminarColaborador(string cedula) {
 string Modelo::listarColaboradores() {
 	return Colaboradores->getListaPersonas()->toString();
 }
+
+Lista* Modelo::getColaboradores() const {
+	return Colaboradores->getListaPersonas();
+}

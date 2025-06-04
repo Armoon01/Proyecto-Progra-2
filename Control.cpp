@@ -50,3 +50,12 @@ void Control::mostrarMenuNominas(Colaborador* colaborador) {
 	}
 	menuNominas->show();
 }
+
+void Control::mostrarMenuReporte() {
+	menuReporte = new MenuReporte(this);
+	menuReporte->show();
+}
+
+Lista* Control::getColaboradores() {
+	return datos->getColaboradores();
+}

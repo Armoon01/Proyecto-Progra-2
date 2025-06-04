@@ -1,0 +1,13 @@
+=== REPORTE DE NÓMINA ===
+Colaborador: Andy, Cedula: 119440052, Salario Base: 1000000.000000
+  - Periodo: Enero, Fecha: 01/01/2025
+    Detalles de la nómina:
+Ingresos:
+  - class ObjectAdaptador const * __ptr64
+Deducciones:
+  - class ObjectAdaptador const * __ptr64
+Salario neto: 70000.00
+
+    Salario Bruto: 100000
+    Deducciones: 30000
+=========================

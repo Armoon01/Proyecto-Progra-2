@@ -14,6 +14,7 @@ public:
 	virtual Colaborador* buscarColaborador(string);
 	virtual void eliminarColaborador(string);
 	virtual string listarColaboradores();
+	Lista* getColaboradores() const;
 }; 
 
 

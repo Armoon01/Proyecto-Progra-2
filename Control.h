@@ -4,12 +4,13 @@
 #include "MenuPrincipal.h"
 #include "MenuColillas.h"
 #include "MenuNominas.h"
-
+#include "MenuReporte.h"
 
 class MenuColaboradores;
 class MenuPrincipal;
 class MenuColillas;
 class MenuNominas;
+class MenuReporte;
 
  class Control{
  private:
@@ -18,6 +19,7 @@ class MenuNominas;
 	 MenuPrincipal* menuPrincipal;
 	 MenuColillas* menuColillas;
 	 MenuNominas* menuNominas;
+	 MenuReporte* menuReporte;
  public:
 	 Control();
 	 virtual void agregar(Colaborador*);
@@ -28,5 +30,6 @@ class MenuNominas;
 	 virtual void mostrarMenuPrincipal();
 	 void mostrarMenuColillas(Colaborador* colaborador);
 	 void mostrarMenuNominas(Colaborador* colaborador);
+	 virtual void mostrarMenuReporte();
+	 Lista* getColaboradores();
 };
-

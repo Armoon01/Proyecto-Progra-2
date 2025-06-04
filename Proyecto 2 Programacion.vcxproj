@@ -152,6 +152,7 @@
     <ClInclude Include="MenuColillas.h" />
     <ClInclude Include="MenuNominas.h" />
     <ClInclude Include="MenuPrincipal.h" />
+    <ClInclude Include="MenuReporte.h" />
     <ClInclude Include="Modelo.h" />
     <ClInclude Include="Nodo.h" />
     <ClInclude Include="Nomina.h" />
@@ -199,6 +200,7 @@
     <ClCompile Include="MenuColillas.cpp" />
     <ClCompile Include="MenuNominas.cpp" />
     <ClCompile Include="MenuPrincipal.cpp" />
+    <ClCompile Include="MenuReporte.cpp" />
     <ClCompile Include="Modelo.cpp" />
     <ClCompile Include="Nodo.cpp" />
     <ClCompile Include="Nomina.cpp" />

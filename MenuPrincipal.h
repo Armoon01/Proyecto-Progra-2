@@ -11,6 +11,5 @@ private:
 public:
 	MenuPrincipal(Control*);
 	virtual void lanzar(int) override;
-
 };
 

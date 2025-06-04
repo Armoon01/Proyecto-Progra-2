@@ -35,7 +35,7 @@ void MenuColillas::lanzar(int opcion) {
             if (colilla) {
                 imprimir(colilla->toString());
                 // Si quieres mostrar detalles de la nómina:
-                imprimir(colilla->getNomina()->toString());
+                imprimir(colilla->getNomina()->toString(colaboradorActual->getSalarioBase()));
             }
         }
         else {
