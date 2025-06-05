@@ -84,19 +84,19 @@ void SistemaNomina::exportarReporte() {
         return;
     }
 
-    archivo << "=== REPORTE DE NÓMINA ===" << std::endl;
+    archivo << "=== REPORTE DE NÓMINA ===" << endl;
     IIterador* it = colaboradores->getIterador();
     while (it->hasMore()) {
         Colaborador* colab = dynamic_cast<Colaborador*>(it->next());
         if (colab) {
-            archivo << colab->toString() << std::endl;
+            archivo << colab->toString() << endl;
             Lista* colillas = planillas->obtenerColillasDeColaborador(colab);
             IIterador* itColillas = colillas->getIterador();
             while (itColillas->hasMore()) {
                 Colilla* colilla = dynamic_cast<Colilla*>(itColillas->next());
                 if (colilla) {
                     archivo << "  - Periodo: " << colilla->getPeriodo()
-                        << ", Fecha: " << colilla->getFecha() << std::endl;
+                        << ", Fecha: " << colilla->getFecha() << endl;
                 }
             }
             delete itColillas;
@@ -104,7 +104,7 @@ void SistemaNomina::exportarReporte() {
         }
     }
     delete it;
-    archivo << "=========================" << std::endl;
+    archivo << "=========================" << endl;
     archivo.close();
 }
 

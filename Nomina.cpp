@@ -47,8 +47,8 @@ Lista* Nomina::getDeducciones() const {
 }
 
 string Nomina::toString(float salarioBase) {
-    std::ostringstream oss;
-    oss << std::fixed << std::setprecision(2); // para que todo tenga 2 decimales
+    ostringstream oss;
+    oss << fixed << setprecision(2); // para que todo tenga 2 decimales
 
     oss << "Ingresos:\n";
     for (int i = 0; i < ingresos->size(); ++i) {
@@ -84,8 +84,8 @@ string Nomina::toString(float salarioBase) {
 }
 
 string Nomina::listarIngresos() const {
-    std::ostringstream oss;
-    oss << std::fixed << std::setprecision(2);
+    ostringstream oss;
+    oss << fixed << setprecision(2);
     for (int i = 0; i < ingresos->size(); ++i) {
         Ingreso* ingreso = dynamic_cast<Ingreso*>(ingresos->get(i));
         if (ingreso) {
@@ -100,8 +100,8 @@ string Nomina::listarIngresos() const {
 
 // Recibe salarioBase para calcular bien los montos.
 string Nomina::listarDeducciones(float salarioBase) const {
-    std::ostringstream oss;
-    oss << std::fixed << std::setprecision(2);
+    ostringstream oss;
+    oss << fixed << setprecision(2);
     for (int i = 0; i < deducciones->size(); ++i) {
         Deduccion* deduccion = dynamic_cast<Deduccion*>(deducciones->get(i));
         if (deduccion) {

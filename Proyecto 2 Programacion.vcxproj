@@ -131,12 +131,12 @@
     <ClInclude Include="CCSS.h" />
     <ClInclude Include="Colaborador.h" />
     <ClInclude Include="Colilla.h" />
+    <ClInclude Include="ColillaBuilder.h" />
     <ClInclude Include="ConjuntoColaborador.h" />
     <ClInclude Include="Consola.h" />
     <ClInclude Include="Control.h" />
     <ClInclude Include="ControladorNomina.h" />
     <ClInclude Include="Deduccion.h" />
-    <ClInclude Include="DeduccionBuilder.h" />
     <ClInclude Include="DeduccionFactory.h" />
     <ClInclude Include="DeduccionFija.h" />
     <ClInclude Include="DeduccionPorcentaje.h" />
@@ -156,6 +156,7 @@
     <ClInclude Include="Modelo.h" />
     <ClInclude Include="Nodo.h" />
     <ClInclude Include="Nomina.h" />
+    <ClInclude Include="NominaBuilder.h" />
     <ClInclude Include="ObjectAdaptador.h" />
     <ClInclude Include="OpcionMenu.h" />
     <ClInclude Include="Planillas.h" />
@@ -168,7 +169,6 @@
     <ClInclude Include="HorasExtraMixta.h" />
     <ClInclude Include="HorasExtraNocturna.h" />
     <ClInclude Include="Ingreso.h" />
-    <ClInclude Include="IngresoBuilder.h" />
     <ClInclude Include="IngresoFactory.h" />
     <ClInclude Include="SistemaNomina.h" />
   </ItemGroup>
@@ -177,12 +177,12 @@
     <ClCompile Include="CCSS.cpp" />
     <ClCompile Include="Colaborador.cpp" />
     <ClCompile Include="Colilla.cpp" />
+    <ClCompile Include="ColillaBuilder.cpp" />
     <ClCompile Include="ConjuntoColaborador.cpp" />
     <ClCompile Include="Consola.cpp" />
     <ClCompile Include="Control.cpp" />
     <ClCompile Include="ControladorNomina.cpp" />
     <ClCompile Include="Deduccion.cpp" />
-    <ClCompile Include="DeduccionBuilder.cpp" />
     <ClCompile Include="DeduccionFactory.cpp" />
     <ClCompile Include="DeduccionFija.cpp" />
     <ClCompile Include="DeduccionPorcentaje.cpp" />
@@ -203,6 +203,7 @@
     <ClCompile Include="Modelo.cpp" />
     <ClCompile Include="Nodo.cpp" />
     <ClCompile Include="Nomina.cpp" />
+    <ClCompile Include="NominaBuilder.cpp" />
     <ClCompile Include="ObjectAdaptador.cpp" />
     <ClCompile Include="OpcionMenu.cpp" />
     <ClCompile Include="Planillas.cpp" />
@@ -215,7 +216,6 @@
     <ClCompile Include="HorasExtraMixta.cpp" />
     <ClCompile Include="HorasExtraNocturna.cpp" />
     <ClCompile Include="Ingreso.cpp" />
-    <ClCompile Include="IngresoBuilder.cpp" />
     <ClCompile Include="IngresoFactory.cpp" />
     <ClCompile Include="SistemaNomina.cpp" />
   </ItemGroup>

@@ -1,39 +1,29 @@
 =================== REPORTE DE NÓMINA ===================
 
-Colaborador: Nikol Quiros | Cédula: 119440561 | Salario Base: 1200000.00
+Colaborador: Juan | Cédula: 119440052 | Salario Base: 1000000.00
 ----------------------------------------------------------
-Colilla #1 | Periodo: Junio | Fecha: 2/2/2
+Colilla #1 | Periodo: Mayo | Fecha: 2/2/2
 ----------------------------------------------------------
   Ingresos:
-    - Horas Extra Nocturnas: 10 horas
+    - Bonificacion Porcentaje: 5.00%
   Deducciones:
-    - Renta: 27800.00
-  Salario Bruto : 1250000.00
-  Deducciones   : 27800.00
-  Salario Neto  : 1222200.00
+    - Deduccion Porcentaje: 2.000000%
+  Salario Bruto : 1050000.00
+  Deducciones   : 20000.00
+  Salario Neto  : 1030000.00
 ----------------------------------------------------------
 
 Colaborador: Andy | Cédula: 119440052 | Salario Base: 1000000.00
 ----------------------------------------------------------
-Colilla #1 | Periodo: Mayo | Fecha: 1/1/1
+Colilla #1 | Periodo: Mayo | Fecha: 2/2/2
 ----------------------------------------------------------
   Ingresos:
-    - Bonificacion Fija: 100000.00
+    - Bonificacion Porcentaje: 5.00%
   Deducciones:
-    - Renta: 7800.00
-  Salario Bruto : 1100000.00
-  Deducciones   : 7800.00
-  Salario Neto  : 1092200.00
-----------------------------------------------------------
-Colilla #2 | Periodo: Junio | Fecha: 2/2/2
-----------------------------------------------------------
-  Ingresos:
-    - Bonificacion Porcentaje: 2.00%
-  Deducciones:
-    - Embargo: 100000.00
-  Salario Bruto : 1020000.00
-  Deducciones   : 100000.00
-  Salario Neto  : 920000.00
+    - Deduccion Porcentaje: 2.000000%
+  Salario Bruto : 1050000.00
+  Deducciones   : 20000.00
+  Salario Neto  : 1030000.00
 ----------------------------------------------------------
 
 =============== FIN DEL REPORTE DE NÓMINA ===============

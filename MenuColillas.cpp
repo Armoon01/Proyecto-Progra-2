@@ -1,10 +1,14 @@
 #include "MenuColillas.h"
 #include <iostream>
+#include <iomanip>
+#include <sstream>
 #include <exception>
 using namespace std;
 
 MenuColillas::MenuColillas(Control* gestor, Colaborador* colaborador, Planillas* planillas)
     : Consola(), gestor(gestor), colaboradorActual(colaborador), planillas(planillas) {
+    setTitulo("ADMINISTRACION DE COLILLAS");
+    setInstrucciones("Seleccione una de las siguientes opciones.");
     agregarOpcion("Listar colillas");
     agregarOpcion("Ver detalles de una colilla");
     agregarOpcion("Eliminar colilla");
@@ -21,37 +25,40 @@ void MenuColillas::lanzar(int opcion) {
             throw exception();
         }
         if (opcion == 1) {
-            // Listar colillas usando Planillas
+            imprimir("\n--------------------------------------------------------------------");
+            imprimir("                       LISTA DE COLILLAS                            ");
+            imprimir("--------------------------------------------------------------------");
             Lista* colillas = planillas->obtenerColillasDeColaborador(colaboradorActual);
             if (!colillas) throw exception();
-            imprimir("Colillas del colaborador:\n");
 
             if (colillas->size() == 0) {
-                imprimir("No hay colillas registradas.");
+                imprimir("| No hay colillas registradas.                                     |");
+                imprimir("--------------------------------------------------------------------");
             }
             else {
+                // Encabezado de la tabla
+                cout << left
+                    << "| " << setw(5) << "Idx"
+                    << "| " << setw(15) << "Periodo"
+                    << "| " << setw(12) << "Fecha"
+                    << "| " << setw(12) << "Salario Neto"
+                    << "|\n";
+                imprimir("--------------------------------------------------------------------");
                 for (int i = 0; i < colillas->size(); ++i) {
                     Colilla* colilla = dynamic_cast<Colilla*>(colillas->get(i));
                     if (colilla) {
-                        // Formato personalizado
-                        string detalle =
-                            "==================== Colilla #" + to_string(i) + " ====================\n" +
-                            "Periodo   : " + colilla->getPeriodo() + "\n" +
-                            "Fecha     : " + colilla->getFecha() + "\n" +
-                            "Colaborador: " + colilla->getColaborador()->getNombre() + " | Cédula: " + colilla->getColaborador()->getCedula() + "\n" +
-                            "----------------------------------------\n" +
-                            "Ingresos:\n" + colilla->getNomina()->listarIngresos() + // Debes implementar listarIngresos() en tu clase Nomina
-                            "Deducciones:\n" + colilla->getNomina()->listarDeducciones(colaboradorActual->getSalarioBase()) + // Debes implementar listarDeducciones() en tu clase Nomina
-                            "----------------------------------------\n" +
-                            "Salario base: " + to_string(colilla->getColaborador()->getSalarioBase()) + "\n" +
-                            "Salario neto: " + to_string(colilla->getNomina()->calcularSalarioNeto(colilla->getColaborador()->getSalarioBase())) + "\n" +
-                            "========================================\n";
-                        imprimir(detalle);
+                        cout << "| " << setw(5) << i
+                            << "| " << setw(15) << colilla->getPeriodo()
+                            << "| " << setw(12) << colilla->getFecha()
+                            << "| " << setw(12) << fixed << setprecision(2)
+                            << colilla->getNomina()->calcularSalarioNeto(colaboradorActual->getSalarioBase())
+                            << "|\n";
                     }
                     else {
                         throw exception();
                     }
                 }
+                imprimir("--------------------------------------------------------------------");
             }
 
             delete colillas;
@@ -59,27 +66,29 @@ void MenuColillas::lanzar(int opcion) {
             show();
         }
         else if (opcion == 2) {
-            // Ver detalles de una colilla usando Planillas
+            imprimir("\n--------------------------------------------------------------------");
+            imprimir("                   DETALLES DE UNA COLILLA                          ");
+            imprimir("--------------------------------------------------------------------");
             Lista* colillas = planillas->obtenerColillasDeColaborador(colaboradorActual);
             if (!colillas) throw exception();
-            int idx = leerEntero("Índice de la colilla a consultar: ");
+            int idx = leerEntero("Indice de la colilla a consultar: ");
             if (idx < 0 || idx >= colillas->size()) throw exception();
             Colilla* colilla = dynamic_cast<Colilla*>(colillas->get(idx));
             if (!colilla) throw exception();
 
-            std::ostringstream detalle;
-            detalle << "================= Detalle de la Colilla =================\n";
+            ostringstream detalle;
+            detalle << "--------------------------------------------------------------------\n";
             detalle << "Colaborador : " << colaboradorActual->getNombre()
-                << " | Cédula: " << colaboradorActual->getCedula() << "\n";
+                << " | Cedula: " << colaboradorActual->getCedula() << "\n";
             detalle << "Periodo     : " << colilla->getPeriodo()
                 << " | Fecha: " << colilla->getFecha() << "\n";
-            detalle << "--------------------------------------------------------\n";
+            detalle << "--------------------------------------------------------------------\n";
             detalle << "Ingresos:\n" << colilla->getNomina()->listarIngresos();
             detalle << "Deducciones:\n" << colilla->getNomina()->listarDeducciones(colaboradorActual->getSalarioBase());
-            detalle << "--------------------------------------------------------\n";
-            detalle << "Salario Neto: " << std::fixed << std::setprecision(2)
+            detalle << "--------------------------------------------------------------------\n";
+            detalle << "Salario Neto: " << fixed << setprecision(2)
                 << colilla->getNomina()->calcularSalarioNeto(colaboradorActual->getSalarioBase()) << "\n";
-            detalle << "========================================================\n";
+            detalle << "--------------------------------------------------------------------\n";
 
             imprimir(detalle.str());
             delete colillas;
@@ -87,15 +96,18 @@ void MenuColillas::lanzar(int opcion) {
             show();
         }
         else if (opcion == 3) {
-            // Eliminar colilla usando Planillas
+            imprimir("\n--------------------------------------------------------------------");
+            imprimir("                        ELIMINAR COLILLA                            ");
+            imprimir("--------------------------------------------------------------------");
             Lista* colillas = planillas->obtenerColillasDeColaborador(colaboradorActual);
             if (!colillas) throw exception();
-            int idx = leerEntero("Índice de la colilla a eliminar: ");
+            int idx = leerEntero("Indice de la colilla a eliminar: ");
             if (idx < 0 || idx >= colillas->size()) throw exception();
             Colilla* colilla = dynamic_cast<Colilla*>(colillas->get(idx));
             if (!colilla) throw exception();
             planillas->obtenerColillas()->remover(colilla);
-            imprimir("Colilla eliminada.");
+            imprimir("\nColilla eliminada correctamente.");
+            imprimir("--------------------------------------------------------------------");
             delete colillas;
             enter();
             show();
@@ -108,7 +120,7 @@ void MenuColillas::lanzar(int opcion) {
         }
     }
     catch (const exception&) {
-        imprimir("Ha ocurrido un error en la operación.");
+        imprimir("\n[!] Ha ocurrido un error en la operacion. Verifique los datos e intente de nuevo.\n");
         enter();
         show();
     }

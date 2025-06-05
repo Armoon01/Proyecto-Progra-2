@@ -1,2 +1,6 @@
-﻿  ConjuntoColaborador.cpp
-  Proyecto 2 Programacion.vcxproj -> C:\Users\ESCINF\Source\Repos\Proyecto-Progra-2\x64\Debug\Proyecto 2 Programacion.exe
+﻿  MenuColaboradores.cpp
+C:\Users\lunai\OneDrive\Escritorio\Proyecto-Progra-2\MenuColaboradores.cpp(60,27): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+C:\Users\lunai\OneDrive\Escritorio\Proyecto-Progra-2\MenuColaboradores.cpp(77,31): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
+  MenuColillas.cpp
+  Generando código...
+  Proyecto 2 Programacion.vcxproj -> C:\Users\lunai\OneDrive\Escritorio\Proyecto-Progra-2\x64\Debug\Proyecto 2 Programacion.exe

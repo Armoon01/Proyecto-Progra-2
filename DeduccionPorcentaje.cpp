@@ -1,7 +1,7 @@
 #include "DeduccionPorcentaje.h"
 
 DeduccionPorcentaje::DeduccionPorcentaje(float porcentaje)
-    : porcentaje(porcentaje) {}
+    : porcentaje(porcentaje/100) {}
 
 float DeduccionPorcentaje::calcular(float salarioBase) const {
     return salarioBase * porcentaje;

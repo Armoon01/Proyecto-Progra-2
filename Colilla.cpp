@@ -1,6 +1,6 @@
 #include "Colilla.h"
 #include <sstream>
-Colilla::Colilla(const std::string& periodo, const std::string& fecha, Nomina* nomina, Colaborador* colaborador)
+Colilla::Colilla(const string& periodo, const string& fecha, Nomina* nomina, Colaborador* colaborador)
     : periodo(periodo), fecha(fecha), nomina(nomina), colaborador(colaborador) {}
 
 Colilla::~Colilla() {
@@ -8,15 +8,15 @@ Colilla::~Colilla() {
 }
 
 void Colilla::mostrarResumen() {
-    std::cout << "Periodo: " << periodo << ", Fecha: " << fecha << std::endl;
+    cout << "Periodo: " << periodo << ", Fecha: " << fecha << endl;
     // Aquí puedes mostrar más detalles del objeto Nomina
 }
 
-std::string Colilla::getPeriodo() const {
+string Colilla::getPeriodo() const {
     return periodo;
 }
 
-std::string Colilla::getFecha() const {
+string Colilla::getFecha() const {
     return fecha;
 }
 
@@ -28,8 +28,8 @@ Colaborador* Colilla::getColaborador() const {
     return colaborador; 
 }
 
-std::string Colilla::toString() const {
-	std::ostringstream oss;
+string Colilla::toString() const {
+	ostringstream oss;
 	oss << "Colilla [Periodo: " << periodo << ", Fecha: " << fecha
 		<< ", Nomina: " << (nomina ? nomina->toString(colaborador->getSalarioBase()) : "null")
 		<< ", Colaborador: " << (colaborador ? colaborador->toString() : "null") << "]";

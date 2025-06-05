@@ -1,5 +1,5 @@
 #include "Colaborador.h"
-Colaborador::Colaborador(const std::string& nombre, const std::string& cedula, float salarioBase)
+Colaborador::Colaborador(const string& nombre, const string& cedula, float salarioBase)
     : nombre(nombre), cedula(cedula), salarioBase(salarioBase) {
 }
 
@@ -7,11 +7,11 @@ Colaborador::~Colaborador() {
 }
 
 
-std::string Colaborador::getNombre() const {
+string Colaborador::getNombre() const {
     return nombre;
 }
 
-std::string Colaborador::getCedula() const {
+string Colaborador::getCedula() const {
     return cedula;
 }
 

@@ -28,7 +28,8 @@ public:
 	static void enter();
 	static void limpiar();
 
-
+	int getCantidadOpciones() const { return listaOpciones->size(); }
+	OpcionMenu* getOpcion(int i) const { return dynamic_cast<OpcionMenu*>(listaOpciones->get(i)); }
 
 	static int leerEntero(string mensaje);
 	static int leerEntero(string mensaje, int, int);

@@ -27,24 +27,24 @@ void Consola::agregarOpcion(string texto){
 	listaOpciones->agregarFinal(new OpcionMenu(texto));
 }
 
-void Consola::show(){
-	limpiar();
-	cout << "==================================================" << endl;
-	cout << "=== " << titulo << endl;
-	cout << "==================================================" << endl;
-	cout << endl;
-	if (instrucciones.compare("") != 0) {
-		cout << instrucciones << endl;
-	}
-	cout << endl;
-	for (int i = 0; i < listaOpciones->size(); i++) {
-		cout << "\t" << (i + 1) << ". " << listaOpciones->get(i)->toString() << endl;
-	}
-	cout << endl;
-	stringstream r;
-	r << "Indique un numero entre 1 y " << listaOpciones->size() << "\n";
-	lanzar(leerEntero(r.str(), 1, listaOpciones->size()));
-
+void Consola::show() {
+    limpiar();
+    cout << "==================================================" << endl;
+    cout << "          " << titulo << endl;
+    cout << "==================================================" << endl;
+    cout << endl;
+    if (!instrucciones.empty()) {
+        cout << instrucciones << endl;
+    }
+    cout << endl;
+    // Opciones numeradas y con formato
+    for (int i = 0; i < listaOpciones->size(); i++) {
+        cout << "  [" << (i + 1) << "] " << listaOpciones->get(i)->toString() << endl;
+    }
+    cout << endl;
+    stringstream r;
+    r << "Indique un numero entre 1 y " << listaOpciones->size() << "\n";
+    lanzar(leerEntero(r.str(), 1, listaOpciones->size()));
 }
 
 void Consola::imprimir(string mensaje, bool salto) {
