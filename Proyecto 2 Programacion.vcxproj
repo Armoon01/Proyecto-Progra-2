@@ -158,13 +158,12 @@
     <ClInclude Include="Nomina.h" />
     <ClInclude Include="ObjectAdaptador.h" />
     <ClInclude Include="OpcionMenu.h" />
+    <ClInclude Include="Planillas.h" />
     <ClInclude Include="Renta.h" />
     <!-- Ingresos y Bonificaciones -->
     <ClInclude Include="BonificacionFija.h" />
     <ClInclude Include="BonificacionPorcentaje.h" />
     <ClInclude Include="HorasExtraDiurna.h" />
-    <ClInclude Include="HorasExtra.h" />
-    <ClInclude Include="HorasExtraBase.h" />
     <ClInclude Include="HorasExtraFeriado.h" />
     <ClInclude Include="HorasExtraMixta.h" />
     <ClInclude Include="HorasExtraNocturna.h" />
@@ -206,6 +205,7 @@
     <ClCompile Include="Nomina.cpp" />
     <ClCompile Include="ObjectAdaptador.cpp" />
     <ClCompile Include="OpcionMenu.cpp" />
+    <ClCompile Include="Planillas.cpp" />
     <ClCompile Include="Renta.cpp" />
     <!-- Ingresos y Bonificaciones -->
     <ClCompile Include="BonificacionFija.cpp" />

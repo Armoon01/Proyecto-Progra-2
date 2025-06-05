@@ -1,9 +1,11 @@
 #include "Embargos.h"
+#include <sstream>
+Embargos::Embargos(float montoFijo)
+    : DeduccionFija(montoFijo) {}
 
-Embargos::Embargos(float porcentaje)
-    : DeduccionPorcentaje(porcentaje) {}
-
-float Embargos::calcular(float salarioBase) const {
-    // Agregar reglas del embargo
-    return DeduccionPorcentaje::calcular(salarioBase);
+string Embargos::toString() const {
+    stringstream ss;
+	ss << fixed << setprecision(2);
+	ss << "Embargo: " << monto;
+	return ss.str();
 }

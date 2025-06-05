@@ -1,32 +1,33 @@
 #include "MenuColaboradores.h"
 
-MenuColaboradores::MenuColaboradores(Control* nuevoGestor){
+MenuColaboradores::MenuColaboradores(Control* nuevoGestor, Planillas* planillas) {
 	gestor = nuevoGestor;
+	this->planillas = planillas;
 
 	Consola::setTitulo("ADMINISTRACION DE Colaboradores");
-	Consola::setInstrucciones("Por favor, leer con cuidado las siguinetes opciones.");
+	Consola::setInstrucciones("Por favor, leer con cuidado las siguientes opciones.");
 
 	agregarOpcion(new OpcionMenu("Crear Colaborador"));
 	agregarOpcion(new OpcionMenu("Editar Colaborador"));
-	agregarOpcion(new OpcionMenu("Listar Colaborador"));
-	agregarOpcion(new OpcionMenu("Agregar Colilla"));
-	agregarOpcion(new OpcionMenu("Colaborador asociados"));
+	agregarOpcion(new OpcionMenu("Listar Colaboradores"));
+	agregarOpcion(new OpcionMenu("Colillas del Colaborador"));
+	agregarOpcion(new OpcionMenu("Colillas asociadas"));
 	agregarOpcion(new OpcionMenu("Agregar Nominas"));
 	agregarOpcion(new OpcionMenu("Regresar al menu"));
 }
 
-void MenuColaboradores::lanzar(int posicion){
+void MenuColaboradores::lanzar(int posicion) {
 	if (posicion == 1) {
 		try {
 			imprimir("Creando Colaborador");
 			string cedula = leerString("Por favor, digitar cedula:");
 			string nombre = leerString("Por favor, digitar Nombre:");
 			float salario = leerDouble("Por favor, digitar Salario:");
-			gestor->agregar(new Colaborador(nombre, cedula, salario ));
+			gestor->agregar(new Colaborador(nombre, cedula, salario));
 			imprimir("Colaborador creado correctamente.");
 			enter();
 		}
-		catch (exception ex) {
+		catch (exception& ex) {
 			imprimir(ex.what());
 			enter();
 		}
@@ -57,20 +58,24 @@ void MenuColaboradores::lanzar(int posicion){
 		show();
 	}
 	else if (posicion == 4) {
-		string cedula = leerString("Cedula de la Colaborador: ");
+		string cedula = leerString("Cedula del Colaborador: ");
 		Colaborador* encontrada = gestor->buscarColaborador(cedula);
 		if (encontrada != NULL) {
 			imprimir("Colaborador encontrado: " + encontrada->toString());
-			Lista* colillas = encontrada->getColillas();
+			// Obtener colillas desde la instancia de Planillas, no desde el colaborador
+			Lista* colillas = planillas->obtenerColillasDeColaborador(encontrada);
 			if (colillas->size() > 0) {
 				imprimir("Colillas asociadas:");
 				imprimir(colillas->toString());
 				enter();
-			} else {
+			}
+			else {
 				imprimir("No hay colillas asociadas a este colaborador.");
 				enter();
 			}
-		} else {
+			delete colillas;
+		}
+		else {
 			imprimir("Colaborador no encontrado.");
 			enter();
 		}
@@ -80,7 +85,8 @@ void MenuColaboradores::lanzar(int posicion){
 		string cedula = leerString("Cedula del Colaborador: ");
 		Colaborador* encontrada = gestor->buscarColaborador(cedula);
 		if (encontrada != NULL) {
-			gestor->mostrarMenuColillas(encontrada);
+			// Ahora pasar también la instancia de planillas
+			gestor->mostrarMenuColillas(encontrada, planillas);
 		}
 		else {
 			imprimir("Colaborador no encontrado.");
@@ -88,11 +94,12 @@ void MenuColaboradores::lanzar(int posicion){
 			show();
 		}
 	}
-	else if (posicion == 6) { 
+	else if (posicion == 6) {
 		string cedula = leerString("Cedula del Colaborador: ");
 		Colaborador* encontrada = gestor->buscarColaborador(cedula);
 		if (encontrada != NULL) {
-			gestor->mostrarMenuNominas(encontrada);
+			// Ahora pasar también la instancia de planillas
+			gestor->mostrarMenuNominas(encontrada, planillas);
 		}
 		else {
 			imprimir("Colaborador no encontrado.");
@@ -102,6 +109,5 @@ void MenuColaboradores::lanzar(int posicion){
 	}
 	else if (posicion == 7) {
 		gestor->mostrarMenuPrincipal();
-
 	}
 }

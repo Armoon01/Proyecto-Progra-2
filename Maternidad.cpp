@@ -1,9 +1,12 @@
 #include "Maternidad.h"
+#include <sstream>
+#include <iomanip>
+Maternidad::Maternidad(float montoFijo)
+    : DeduccionFija(montoFijo) {}
 
-Maternidad::Maternidad(float porcentaje)
-    : DeduccionPorcentaje(porcentaje) {}
-
-float Maternidad::calcular(float salarioBase) const {
-    // Puedes agregar reglas especiales aquí si tienes alguna
-    return DeduccionPorcentaje::calcular(salarioBase);
+string Maternidad::toString() const {
+    stringstream ss;
+	ss << fixed << setprecision(2);
+	ss << "Maternidad: " << monto;
+	return ss.str();
 }

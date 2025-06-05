@@ -1,8 +1,8 @@
 #pragma once
-#include "DeduccionPorcentaje.h"
+#include "DeduccionFija.h"
 
-class Maternidad : public DeduccionPorcentaje {
+class Maternidad : public DeduccionFija {
 public:
-    Maternidad(float porcentaje);
-    float calcular(float salarioBase) const override;
+    Maternidad(float montoFijo);
+    string toString() const override;
 };

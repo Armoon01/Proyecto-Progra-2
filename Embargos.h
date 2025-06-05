@@ -1,8 +1,9 @@
 #pragma once
-#include "DeduccionPorcentaje.h"
+#include "DeduccionFija.h"
+#include <iomanip>
 
-class Embargos : public DeduccionPorcentaje {
+class Embargos : public DeduccionFija {
 public:
-    Embargos(float porcentaje);
-    float calcular(float salarioBase) const override;
+    Embargos(float montoFijo);
+    string toString() const override;
 };

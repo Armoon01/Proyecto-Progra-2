@@ -6,3 +6,7 @@ DeduccionPorcentaje::DeduccionPorcentaje(float porcentaje)
 float DeduccionPorcentaje::calcular(float salarioBase) const {
     return salarioBase * porcentaje;
 }
+
+string DeduccionPorcentaje::toString() const {
+	return "Deduccion Porcentaje: " + to_string(porcentaje * 100) + "%";
+}

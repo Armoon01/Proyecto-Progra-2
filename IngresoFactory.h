@@ -4,12 +4,15 @@
 #include "HorasExtraMixta.h"
 #include "HorasExtraNocturna.h"
 #include "HorasExtraFeriado.h"
-#include "HorasExtraBase.h"
-#include <iostream>
-using namespace std;
+#include "BonificacionFija.h"
+#include "BonificacionPorcentaje.h"
 
 class IngresoFactory {
 public:
-    static Ingreso* crearIngreso(const string& tipo, HorasExtra* base);
+    static Ingreso* crearHorasExtraDiurna(double cantidadHoras);
+    static Ingreso* crearHorasExtraMixta(double cantidadHoras);
+    static Ingreso* crearHorasExtraNocturna(double cantidadHoras);
+    static Ingreso* crearHorasExtraFeriado(double cantidadHoras);
+    static Ingreso* crearBonificacionFija(double valor);
+    static Ingreso* crearBonificacionPorcentaje(double porcentaje);
 };
-

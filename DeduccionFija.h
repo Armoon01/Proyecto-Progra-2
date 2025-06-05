@@ -7,4 +7,5 @@ protected:
 public:
     DeduccionFija(float monto);
     virtual float calcular(float salarioBase) const override;
+    virtual string toString() const override;
 };

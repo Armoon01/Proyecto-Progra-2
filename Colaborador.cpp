@@ -1,16 +1,11 @@
 #include "Colaborador.h"
 Colaborador::Colaborador(const std::string& nombre, const std::string& cedula, float salarioBase)
     : nombre(nombre), cedula(cedula), salarioBase(salarioBase) {
-    colillas = new Lista();
 }
 
 Colaborador::~Colaborador() {
-    delete colillas;
 }
 
-void Colaborador::agregarColilla(Colilla* c) {
-    colillas->agregar(c);
-}
 
 std::string Colaborador::getNombre() const {
     return nombre;
@@ -24,9 +19,6 @@ float Colaborador::getSalarioBase() const {
     return salarioBase;
 }
 
-Lista* Colaborador::getColillas() const {
-    return colillas;
-}
 
 bool Colaborador::equals(IObjecto* ref) {
     Colaborador* referencia = (Colaborador*)ref;

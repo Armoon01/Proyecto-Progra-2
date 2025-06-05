@@ -1,18 +1,23 @@
 #pragma once
 #include "Deduccion.h"
-#include <iostream>
-#include "CCSS.h"
-#include "Renta.h"
-#include "Embargos.h"
-#include "Maternidad.h"
-#include "DeduccionFija.h"
-#include "DeduccionPorcentaje.h"
+#include <string>
+
 class DeduccionBuilder {
 public:
-    static Deduccion* crearCCSS(float porcentajeSEM, float porcentajeIVM, float porcentajeLPT);
-    static Deduccion* crearRenta(float porcentaje);
-    static Deduccion* crearEmbargos(float porcentaje);
-    static Deduccion* crearMaternidad(float porcentaje);
-    static Deduccion* crearFija(float monto);
-    static Deduccion* crearPorcentaje(float porcentaje);
+    DeduccionBuilder& Tipo(const string& tipo); // "CCSS", "Renta", "Embargos", "Maternidad", "Fija", "Porcentaje"
+    DeduccionBuilder& PorcentajeSEM(float porcentaje);
+    DeduccionBuilder& PorcentajeIVM(float porcentaje);
+    DeduccionBuilder& PorcentajeLPT(float porcentaje);
+    DeduccionBuilder& Porcentaje(float porcentaje);
+    DeduccionBuilder& Monto(float monto);
+
+    Deduccion* Build();
+
+private:
+    string tipo;
+    float porcentajeSEM = 0.0f;
+    float porcentajeIVM = 0.0f;
+    float porcentajeLPT = 0.0f;
+    float porcentaje = 0.0f;
+    float monto = 0.0f;
 };

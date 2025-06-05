@@ -2,6 +2,7 @@
 #include "Lista.h"
 #include "Ingreso.h"
 #include "Deduccion.h"
+#include "CCSS.h"
 class Nomina {
 private:
     Lista* ingresos;     // Lista de Ingreso*

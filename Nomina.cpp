@@ -1,6 +1,7 @@
 #include "Nomina.h"
+#include "Renta.h"
 #include <sstream>
-
+#include <iomanip> 
 Nomina::Nomina() {
     ingresos = new Lista();
     deducciones = new Lista();
@@ -12,7 +13,7 @@ Nomina::~Nomina() {
 }
 
 float Nomina::calcularSalarioBruto(float salarioBase) {
-    float total = 0.0;
+    float total = salarioBase;
     for (int i = 0; i < ingresos->size(); ++i) {
         Ingreso* ingreso = dynamic_cast<Ingreso*>(ingresos->get(i));
         if (ingreso) {
@@ -47,6 +48,8 @@ Lista* Nomina::getDeducciones() const {
 
 string Nomina::toString(float salarioBase) {
     std::ostringstream oss;
+    oss << std::fixed << std::setprecision(2); // para que todo tenga 2 decimales
+
     oss << "Ingresos:\n";
     for (int i = 0; i < ingresos->size(); ++i) {
         Ingreso* ingreso = dynamic_cast<Ingreso*>(ingresos->get(i));
@@ -54,18 +57,28 @@ string Nomina::toString(float salarioBase) {
             oss << "  - " << ingreso->toString() << "\n";
         }
     }
+
     oss << "Deducciones:\n";
     for (int i = 0; i < deducciones->size(); ++i) {
         Deduccion* deduccion = dynamic_cast<Deduccion*>(deducciones->get(i));
         if (deduccion) {
-            oss << "  - " << deduccion->toString() << "\n";
+            // Si es Renta, calculamos explícitamente con salarioBase
+            Renta* renta = dynamic_cast<Renta*>(deduccion);
+            if (renta) {
+                float impuesto = renta->calcular(salarioBase);
+                oss << "  - Renta: " << impuesto << "\n";
+            }
+            else if (CCSS* ccss = dynamic_cast<CCSS*>(deduccion)) {
+                float monto = ccss->calcular(salarioBase);
+                oss << "  - CCSS: " << monto << "\n";
+            }
+            else {
+                oss << "  - " << deduccion->toString() << "\n";
+            }
         }
     }
-    // Mostrar salario neto con dos decimales usando stringstream básico
+
     float neto = calcularSalarioNeto(salarioBase);
-    int parteEntera = static_cast<int>(neto);
-    int parteDecimal = static_cast<int>((neto - parteEntera) * 100);
-    oss << "Salario neto: " << parteEntera << "."
-        << (parteDecimal < 10 ? "0" : "") << parteDecimal << "\n";
+    oss << "Salario neto: " << neto << "\n";
     return oss.str();
 }

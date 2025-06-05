@@ -8,4 +8,5 @@ class CCSS : public Deduccion {
 public:
     CCSS(float sem, float ivm, float lpt);
     virtual float calcular(float salarioBase) const override;
+    virtual string toString() const override;
 };

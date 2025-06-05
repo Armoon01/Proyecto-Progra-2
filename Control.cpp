@@ -1,39 +1,42 @@
 #include "Control.h"
 
-Control::Control(){
+Control::Control(Planillas* planillas) {
 	datos = Modelo::getInstancia();
-	menuColaboradores = new MenuColaboradores(this);
+	this->planillas = planillas;
+	menuColaboradores = new MenuColaboradores(this, planillas);
 	menuPrincipal = new MenuPrincipal(this);
+	menuColillas = nullptr;
+	menuNominas = nullptr;
+	menuReporte = nullptr;
 }
 
-void Control::agregar(Colaborador* c){
+void Control::agregar(Colaborador* c) {
 	datos->agregar(c);
 }
 
-Colaborador* Control::buscarColaborador(string cedula){
-
+Colaborador* Control::buscarColaborador(string cedula) {
 	return datos->buscarColaborador(cedula);
 }
 
-void Control::eliminarColaborador(string cedula){
+void Control::eliminarColaborador(string cedula) {
 	datos->eliminarColaborador(cedula);
 }
 
-string Control::listarColaboradores(){
+string Control::listarColaboradores() {
 	return datos->listarColaboradores();
 }
 
-void Control::mostrarMenuColaboradores(){
+void Control::mostrarMenuColaboradores() {
 	menuColaboradores->show();
 }
 
-void Control::mostrarMenuPrincipal(){
+void Control::mostrarMenuPrincipal() {
 	menuPrincipal->show();
 }
 
-void Control::mostrarMenuColillas(Colaborador* colaborador) {
+void Control::mostrarMenuColillas(Colaborador* colaborador, Planillas* planillas) {
 	if (!menuColillas) {
-		menuColillas = new MenuColillas(this, colaborador);
+		menuColillas = new MenuColillas(this, colaborador, planillas);
 	}
 	else {
 		menuColillas->setColaborador(colaborador);
@@ -41,9 +44,9 @@ void Control::mostrarMenuColillas(Colaborador* colaborador) {
 	menuColillas->show();
 }
 
-void Control::mostrarMenuNominas(Colaborador* colaborador) {
+void Control::mostrarMenuNominas(Colaborador* colaborador, Planillas* planillas) {
 	if (!menuNominas) {
-		menuNominas = new MenuNominas(this, colaborador);
+		menuNominas = new MenuNominas(this, colaborador, planillas);
 	}
 	else {
 		menuNominas->setColaborador(colaborador);
@@ -52,7 +55,9 @@ void Control::mostrarMenuNominas(Colaborador* colaborador) {
 }
 
 void Control::mostrarMenuReporte() {
-	menuReporte = new MenuReporte(this);
+	if (!menuReporte) {
+		menuReporte = new MenuReporte(this, planillas);
+	}
 	menuReporte->show();
 }
 

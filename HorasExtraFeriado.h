@@ -1,8 +1,13 @@
 #pragma once
-#include "HorasExtra.h"
-
-class HorasExtraFeriado : public HorasExtra {
+#include "Ingreso.h"
+#include <sstream>
+class HorasExtraFeriado : public Ingreso {
 public:
-    HorasExtraFeriado(HorasExtra* base);
-    double Calcular(double SalarioBase) const override;
+    HorasExtraFeriado(double cantidadHoras);
+
+    double Calcular(double salarioBase) const override;
+    string toString() const override;
+
+private:
+    double cantidadHoras;
 };

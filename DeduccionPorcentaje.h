@@ -7,4 +7,5 @@ protected:
 public:
     DeduccionPorcentaje(float porcentaje);
     virtual float calcular(float salarioBase) const override;
+    virtual string toString() const override;
 };
