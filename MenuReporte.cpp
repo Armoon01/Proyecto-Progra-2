@@ -1,4 +1,5 @@
-#include "MenuReporte.h"    
+#include "MenuReporte.h"
+#include <exception>
 
 MenuReporte::MenuReporte(Control* gestor, Planillas* planillas) {
     this->gestor = gestor;
@@ -10,19 +11,29 @@ MenuReporte::MenuReporte(Control* gestor, Planillas* planillas) {
 }
 
 void MenuReporte::lanzar(int opcion) {
-    switch (opcion) {
-    case 1:
-        Consola::imprimir("Generando reportes...");
-        SistemaNomina::getInstance(planillas)->agregarListaColaborador(gestor->getColaboradores());
-        SistemaNomina::getInstance(planillas)->generarPlanilla();
-        Consola::enter();
-        show();
-        break;
-    case 2:
-        gestor->mostrarMenuPrincipal();
-        break;
-    default:
-        Consola::imprimir("Opción no válida.");
+    try {
+        switch (opcion) {
+        case 1:
+            Consola::imprimir("Generando reportes...");
+            if (!gestor || !planillas) throw exception();
+            if (!gestor->getColaboradores()) throw exception();
+            SistemaNomina::getInstance(planillas)->agregarListaColaborador(gestor->getColaboradores());
+            SistemaNomina::getInstance(planillas)->generarPlanilla();
+            Consola::enter();
+            show();
+            break;
+        case 2:
+            if (!gestor) throw exception();
+            gestor->mostrarMenuPrincipal();
+            break;
+        default:
+            Consola::imprimir("Opción no válida.");
+            Consola::enter();
+            show();
+        }
+    }
+    catch (const exception&) {
+        Consola::imprimir("Ha ocurrido un error en la operación.");
         Consola::enter();
         show();
     }

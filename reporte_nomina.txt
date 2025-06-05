@@ -1,13 +1,39 @@
-=== REPORTE DE NÓMINA ===
-Colaborador: Andy, Cedula: 119440052, Salario Base: 1000000.000000
-  - Periodo: Mayo, Fecha: 
-    Detalles de la nómina:
-Ingresos:
-  - Bonificacion Fija: 500000
-Deducciones:
-  - Maternidad: 1000000.000000
-Salario neto: 500000.00
+=================== REPORTE DE NÓMINA ===================
 
-    Salario Bruto: 1500000.00
-    Deducciones: 1000000.00
-=========================
+Colaborador: Nikol Quiros | Cédula: 119440561 | Salario Base: 1200000.00
+----------------------------------------------------------
+Colilla #1 | Periodo: Junio | Fecha: 2/2/2
+----------------------------------------------------------
+  Ingresos:
+    - Horas Extra Nocturnas: 10 horas
+  Deducciones:
+    - Renta: 27800.00
+  Salario Bruto : 1250000.00
+  Deducciones   : 27800.00
+  Salario Neto  : 1222200.00
+----------------------------------------------------------
+
+Colaborador: Andy | Cédula: 119440052 | Salario Base: 1000000.00
+----------------------------------------------------------
+Colilla #1 | Periodo: Mayo | Fecha: 1/1/1
+----------------------------------------------------------
+  Ingresos:
+    - Bonificacion Fija: 100000.00
+  Deducciones:
+    - Renta: 7800.00
+  Salario Bruto : 1100000.00
+  Deducciones   : 7800.00
+  Salario Neto  : 1092200.00
+----------------------------------------------------------
+Colilla #2 | Periodo: Junio | Fecha: 2/2/2
+----------------------------------------------------------
+  Ingresos:
+    - Bonificacion Porcentaje: 2.00%
+  Deducciones:
+    - Embargo: 100000.00
+  Salario Bruto : 1020000.00
+  Deducciones   : 100000.00
+  Salario Neto  : 920000.00
+----------------------------------------------------------
+
+=============== FIN DEL REPORTE DE NÓMINA ===============

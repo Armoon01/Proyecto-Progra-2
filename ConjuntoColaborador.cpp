@@ -1,5 +1,5 @@
 #include "ConjuntoColaborador.h"
-
+#include <iomanip>
 ConjuntoColaborador::ConjuntoColaborador() {
     listaPersonas = new Lista();
 }
@@ -43,4 +43,23 @@ void ConjuntoColaborador::remover(const string& cedula) {
         }
     }
     delete it;
+}
+
+string ConjuntoColaborador::listarColaboradores() const {
+    std::ostringstream oss;
+    oss << "----------------------------------------------------------------------------\n";
+    for (int i = 0; i < listaPersonas->size(); ++i) {
+        Colaborador* col = dynamic_cast<Colaborador*>(listaPersonas->get(i));
+        if (col) {
+            oss << i + 1 << ". Nombre: " << col->getNombre()
+                << " | Cedula: " << col->getCedula()
+                << " | Salario Base: " << std::fixed << std::setprecision(2) << col->getSalarioBase()
+                << "\n";
+        }
+    }
+    if (listaPersonas->size() == 0) {
+        oss << "No hay colaboradores registrados.\n";
+    }
+    oss << "----------------------------------------------------------------------------";
+    return oss.str();
 }

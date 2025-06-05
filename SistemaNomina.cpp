@@ -24,14 +24,7 @@ void SistemaNomina::registrarColaborador(Colaborador* e) {
 }
 
 void SistemaNomina::agregarListaColaborador(Lista* e) {
-    IIterador* it = e->getIterador();
-    while (it->hasMore()) {
-        Colaborador* colab = dynamic_cast<Colaborador*>(it->next());
-        if (colab) {
-            colaboradores->agregar(colab);
-        }
-    }
-    delete it;
+    colaboradores = e;
 }
 
 void SistemaNomina::generarPlanilla() {
@@ -41,33 +34,46 @@ void SistemaNomina::generarPlanilla() {
         return;
     }
 
-    archivo << "=== REPORTE DE NÓMINA ===" << std::endl;
+    archivo << "=================== REPORTE DE NÓMINA ===================\n\n";
     IIterador* it = colaboradores->getIterador();
     while (it->hasMore()) {
         Colaborador* colab = dynamic_cast<Colaborador*>(it->next());
         if (colab) {
-            archivo << colab->toString() << std::endl;
+            archivo << "Colaborador: " << colab->getNombre()
+                << " | Cédula: " << colab->getCedula()
+                << " | Salario Base: " << fixed << setprecision(2) << colab->getSalarioBase() << "\n";
+            archivo << "----------------------------------------------------------\n";
+
             Lista* colillas = planillas->obtenerColillasDeColaborador(colab);
             IIterador* itColillas = colillas->getIterador();
+            int numColilla = 1;
             while (itColillas->hasMore()) {
                 Colilla* colilla = dynamic_cast<Colilla*>(itColillas->next());
                 if (colilla) {
-                    archivo << "  - Periodo: " << colilla->getPeriodo()
-                        << ", Fecha: " << colilla->getFecha() << std::endl;
-                    archivo << "    Detalles de la nómina:" << std::endl;
+                    archivo << "Colilla #" << numColilla++ << " | Periodo: " << colilla->getPeriodo()
+                        << " | Fecha: " << colilla->getFecha() << "\n";
+                    archivo << "----------------------------------------------------------\n";
 
-                    archivo << colilla->getNomina()->toString(colab->getSalarioBase()) << std::endl;
-                    archivo << fixed << setprecision(2);
-                    archivo << "    Salario Bruto: " << colilla->getNomina()->calcularSalarioBruto(colab->getSalarioBase()) << endl;
-                    archivo << "    Deducciones: " << colilla->getNomina()->calcularDeducciones(colab->getSalarioBase()) << endl;
+                    archivo << "  Ingresos:\n";
+                    archivo << colilla->getNomina()->listarIngresos(); // Ya incluye sangría y saltos de línea
+
+                    archivo << "  Deducciones:\n";
+                    archivo << colilla->getNomina()->listarDeducciones(colab->getSalarioBase());
+
+                    archivo << "  Salario Bruto : " << fixed << setprecision(2) << colilla->getNomina()->calcularSalarioBruto(colab->getSalarioBase()) << "\n";
+                    archivo << "  Deducciones   : " << fixed << setprecision(2) << colilla->getNomina()->calcularDeducciones(colab->getSalarioBase()) << "\n";
+                    archivo << "  Salario Neto  : " << fixed << setprecision(2) << colilla->getNomina()->calcularSalarioNeto(colab->getSalarioBase()) << "\n";
+                    archivo << "----------------------------------------------------------\n";
                 }
             }
             delete itColillas;
             delete colillas;
+
+            archivo << "\n";
         }
     }
     delete it;
-    archivo << "=========================" << std::endl;
+    archivo << "=============== FIN DEL REPORTE DE NÓMINA ===============\n";
     archivo.close();
 }
 

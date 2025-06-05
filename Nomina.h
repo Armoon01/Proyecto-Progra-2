@@ -16,5 +16,7 @@ public:
     Lista* getIngresos() const;
     Lista* getDeducciones() const;
     string toString(float salarioBase);
+    string listarIngresos() const;
+    string listarDeducciones(float SalarioBase) const;
 };
 

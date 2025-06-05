@@ -211,8 +211,6 @@
     <ClCompile Include="BonificacionFija.cpp" />
     <ClCompile Include="BonificacionPorcentaje.cpp" />
     <ClCompile Include="HorasExtraDiurna.cpp" />
-    <ClCompile Include="HorasExtra.cpp" />
-    <ClCompile Include="HorasExtraBase.cpp" />
     <ClCompile Include="HorasExtraFeriado.cpp" />
     <ClCompile Include="HorasExtraMixta.cpp" />
     <ClCompile Include="HorasExtraNocturna.cpp" />

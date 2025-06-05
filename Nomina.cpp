@@ -82,3 +82,45 @@ string Nomina::toString(float salarioBase) {
     oss << "Salario neto: " << neto << "\n";
     return oss.str();
 }
+
+string Nomina::listarIngresos() const {
+    std::ostringstream oss;
+    oss << std::fixed << std::setprecision(2);
+    for (int i = 0; i < ingresos->size(); ++i) {
+        Ingreso* ingreso = dynamic_cast<Ingreso*>(ingresos->get(i));
+        if (ingreso) {
+            oss << "    - " << ingreso->toString() << "\n";
+        }
+    }
+    if (ingresos->size() == 0) {
+        oss << "    (Sin ingresos)\n";
+    }
+    return oss.str();
+}
+
+// Recibe salarioBase para calcular bien los montos.
+string Nomina::listarDeducciones(float salarioBase) const {
+    std::ostringstream oss;
+    oss << std::fixed << std::setprecision(2);
+    for (int i = 0; i < deducciones->size(); ++i) {
+        Deduccion* deduccion = dynamic_cast<Deduccion*>(deducciones->get(i));
+        if (deduccion) {
+            Renta* renta = dynamic_cast<Renta*>(deduccion);
+            if (renta) {
+                float impuesto = renta->calcular(salarioBase);
+                oss << "    - Renta: " << impuesto << "\n";
+            }
+            else if (CCSS* ccss = dynamic_cast<CCSS*>(deduccion)) {
+                float monto = ccss->calcular(salarioBase);
+                oss << "    - CCSS: " << monto << "\n";
+            }
+            else {
+                oss << "    - " << deduccion->toString() << "\n";
+            }
+        }
+    }
+    if (deducciones->size() == 0) {
+        oss << "    (Sin deducciones)\n";
+    }
+    return oss.str();
+}
